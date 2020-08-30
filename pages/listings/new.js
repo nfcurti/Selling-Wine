@@ -30,13 +30,8 @@ class NewListing extends React.Component {
               <div className="box popover">
                 <h3>Create new listing</h3>
 
-                {isTestMode && (
-                  <p>
-                    Creating new listings have been disabled as Kavholm runs in
-                    test-mode.
-                  </p>
-                )}
-                {!isTestMode && <ListingForm />}
+                
+                {<ListingForm />}
               </div>
             </div>
           </div>

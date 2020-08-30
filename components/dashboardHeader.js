@@ -74,7 +74,7 @@ class DashboardHeader extends Component {
                       (this.props.dashboardType == "renter" ? "active" : "")
                     }
                   >
-                    Your trips
+                    Your wines
                   </a>
                 </Link>
               </li>

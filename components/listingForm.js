@@ -54,8 +54,8 @@ class ListingForm extends Component {
                 type="text"
                 id="title"
                 name="title"
-                placeholder="Breezy cabana in Baja California"
-                value={this.state.title}
+                placeholder="2017 Kistler Pinot Noir Sonoma Coast"
+                
                 onChange={this.handleChange}
               />
             </div>
@@ -66,21 +66,20 @@ class ListingForm extends Component {
                 className="form-control"
                 id="description"
                 name="description"
-                placeholder="Breezy cabana in Baja California"
-                value={this.state.description}
+                placeholder="Picked from earlier ripening blocks of the Kistler..."
+                
                 onChange={this.handleChange}
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="price">Price per night (in cents)</label>
+              <label htmlFor="price">Price per unit</label>
               <input
                 className="form-control"
                 type="text"
                 id="price"
                 name="price"
                 placeholder="10000 USD"
-                value={this.state.price}
                 onChange={this.handleChange}
               />
             </div>
@@ -91,7 +90,6 @@ class ListingForm extends Component {
                 id="currency"
                 className="form-control"
                 name="currency"
-                value={this.state.currency}
                 onChange={this.handleChange}
               >
                 <option>USD</option>
@@ -107,7 +105,6 @@ class ListingForm extends Component {
                 id="location"
                 name="location"
                 placeholder="Mexico"
-                value={this.state.location}
                 onChange={this.handleChange}
               />
             </div>
