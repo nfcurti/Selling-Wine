@@ -18,15 +18,6 @@ const Layout = (props) => (
       </div>
     )}
 
-    {getConfig().publicRuntimeConfig.isTestMode && (
-      <div className="api-warning">
-        <p>
-          Kavholm is currently in test-mode. Only test cards can be used, and no
-          real transations are processsed.
-        </p>
-      </div>
-    )}
-
     <Nav
       isAuthenticated={props.isAuthenticated}
       userProfile={props.userProfile}
@@ -75,7 +66,7 @@ const Layout = (props) => (
             rgba(255, 255, 255, 0) 50%,
             #ffffff 100%
           ),
-          url(https://images.unsplash.com/photo-1542349301445-c5f6ec562729?ixlib=rb-1.2.1&auto=format&fit=crop&w=2315&q=80)
+          url(https://bgwall.net/wp-content/uploads/2014/09/best-bottle-wine-wallpaper-for-desktop.jpg)
             no-repeat; // Source: https://unsplash.com/photos/wh-7GeXxItI
         background-size: cover;
         background-position: center center;

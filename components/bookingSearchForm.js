@@ -38,7 +38,8 @@ class BookingSearchForm extends Component {
             : 'booking-search-form'
         }
       >
-        <select className="search dropdown-toggle">
+        <select className="people dropdown-toggle">
+          <option value="" disabled selected>Select your shipping location</option>
           <option>Canada</option>
           <option>Denmark</option>
           <option>France</option>
@@ -51,33 +52,10 @@ class BookingSearchForm extends Component {
           <option>USA</option>
         </select>
 
-        <div className="row">
-          <div className="col-6">
-            <DatePicker
-              selected={this.state.startDate}
-              className="date"
-              onChange={this.handleStartDateChange}
-            />
-          </div>
-          <div className="col-6">
-            <DatePicker
-              selected={this.state.endDate}
-              className="date"
-              onChange={this.handleEndDateChange}
-            />
-          </div>
-        </div>
-        <select className="guests dropdown-toggle">
-          <option>Guests</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
-          <option>7</option>
-          <option>8</option>
-        </select>
+      
+        <input placeholder="Search wine" className="search dropdown-toggle">
+          
+        </input>
 
         <style jsx>{`
           .booking-search-form input {
@@ -90,7 +68,7 @@ class BookingSearchForm extends Component {
           }
 
           .booking-search-form.large .search,
-          .booking-search-form.large .date,
+          .booking-search-form.large .people,
           .booking-search-form.large .guests {
             background-size: 20px 20px;
             background-position: 16px 14px;
@@ -98,6 +76,11 @@ class BookingSearchForm extends Component {
 
           .booking-search-form .search {
             background: url(/static/search.svg) no-repeat scroll 7px 6px;
+            background-size: 15px 15px;
+          }
+
+          .booking-search-form .people {
+            background: url(/static/people.svg) no-repeat scroll 7px 6px;
             background-size: 15px 15px;
           }
 

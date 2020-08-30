@@ -15,7 +15,7 @@ class Home extends React.Component {
           <div className="splash-image">
             <div className="container">
               <div className="popover">
-                <h1>Book unique places to stay around the globe</h1>
+                <h1>Buy unique wines from all around the globe</h1>
 
                 <HomeSearchForm size="large" />
 
@@ -31,21 +31,21 @@ class Home extends React.Component {
           <div className="annotation">
             <p>
               <img src="static/stripe.svg" width="60" />
-              Kavholm is a{' '}
+              Kavholm is powered by {' '}
               <a className="stripe" href="https://stripe.com">
                 Stripe
               </a>{' '}
-              demo that uses{' '}
+              to ensure secure transaction through the web{' '}
               <a href="https://stripe.com/connect" target="_blank">
-                Connect
+                
               </a>{' '}
-              to build a global marketplace.{' '}
+              
               <a
                 className="github arrow"
-                href="https://github.com/stripe/stripe-demo-connect-kavholm-marketplace"
+                href="https://stripe.com"
                 target="_blank"
               >
-                View on GitHub
+                Learn More
               </a>
             </p>
           </div>
@@ -64,7 +64,7 @@ class Home extends React.Component {
             font-size: 27px;
             font-weight: 600;
             color: #202020;
-            width: 70%;
+            width: 100%;
             margin-bottom: 30px;
           }
 
@@ -80,7 +80,7 @@ class Home extends React.Component {
                 rgba(255, 255, 255, 0) 50%,
                 #ffffff 100%
               ),
-              url(https://images.unsplash.com/photo-1542349301445-c5f6ec562729?ixlib=rb-1.2.1&auto=format&fit=crop&w=2315&q=80)
+              url(https://bgwall.net/wp-content/uploads/2014/09/best-bottle-wine-wallpaper-for-desktop.jpg)
                 no-repeat;
             background-size: cover;
             background-position: center center;
