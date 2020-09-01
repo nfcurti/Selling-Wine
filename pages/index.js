@@ -31,15 +31,15 @@ class Home extends React.Component {
           <div className="annotation">
             <p>
               <img src="static/stripe.svg" width="60" />
-              Kavholm is powered by {' '}
+              SoloBottle is powered by {' '}
               <a className="stripe" href="https://stripe.com">
                 Stripe
               </a>{' '}
               to ensure secure transaction through the web{' '}
               <a href="https://stripe.com/connect" target="_blank">
-                
+
               </a>{' '}
-              
+
               <a
                 className="github arrow"
                 href="https://stripe.com"

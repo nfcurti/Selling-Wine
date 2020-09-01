@@ -70,7 +70,7 @@ class Dashboard extends React.Component {
                       label="New listing"
                       link="/listings/new"
                       tipTitle="Time to create your first listing."
-                      tipBody="You can now add your home to Kavholm"
+                      tipBody="You can now add your wine to SoloBottle"
                     />
                   </div>
                 </div>
