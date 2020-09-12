@@ -15,8 +15,12 @@ export default async (req, res) => {
     let lineItems = [
       {item: 'Listing price', amount: listing.price.amount},
       {
-        item: 'Marketplace fees (10%)',
-        amount: Math.ceil(listing.price.amount * 0.1),
+        item: 'Marketplace fees ($10)',
+        amount: 1000,//Math.ceil(listing.price.amount * 0.1),
+      },
+      {
+        item: 'Shipping fees ($10)',
+        amount: 1000,//Math.ceil(listing.price.amount * 0.1),
       },
     ];
 
