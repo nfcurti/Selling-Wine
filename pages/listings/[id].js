@@ -27,10 +27,19 @@ class Listing extends React.Component {
       'get',
       `/api/transactions/listing?listingId=${listing.id}`,
     );
+    if (listing.authorId) {
+      try {
+        let author = await API.makeRequest(
+          'get',
+          `/api/users/userInfo?id=${listing.authorId}`,
+        );
+        listing.author = author;
+      } catch {}
+    }
 
     return {
       listing: listing,
-      bookings: bookings,
+      bookings: bookings
     };
   }
 
@@ -158,6 +167,12 @@ class Listing extends React.Component {
                     Buy now
                   </button>
                 )}
+
+                {
+                  this.props.listing.author.website ?
+                  <a href={'//'+this.props.listing.author.website} className="websiteLink">Visit website</a>
+                  : null
+                }
 
                 {!this.props.isAuthenticated && (
                   <Link href="/login">
@@ -325,6 +340,15 @@ class Listing extends React.Component {
 
             .pane-images {
               padding-bottom: 50px;
+            }
+
+            .websiteLink {
+              font-weight: normal;
+              text-decoration: none;
+              margin: 0;
+              line-height: 18px;
+              padding-top: 6px;
+              color: black;
             }
           `}</style>
         </div>
