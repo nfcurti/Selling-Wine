@@ -4,6 +4,8 @@ import Nav from '../components/nav';
 import NProgress from '../components/nprogress';
 import getConfig from 'next/config';
 
+import {setAgeLimit, getAgeLimit} from '../utils/ageLimit';
+
 const Layout = (props) => (
   <>
     <Head title={props.title || 'Home'} />
@@ -32,6 +34,29 @@ const Layout = (props) => (
     >
       {props.children}
     </div>
+
+    {
+      (
+        getAgeLimit() != undefined
+      ) ?
+      null
+      :
+      <div className={'floatalert '}>
+        <div className={'falert-center'}>
+          <p>Are you over 21?</p>
+          <div onClick={() => {
+            setAgeLimit(true);
+          }} className={'falert-button-yes'}>
+            <p>Yes I do</p>
+          </div>
+          <div onClick={() => {
+            setAgeLimit(false);
+          }} className={'falert-button-no'}>
+            <p>No I don't</p>
+          </div>
+        </div>
+      </div>
+    }
 
     <style jsx>{`
       :global(body) {
@@ -240,6 +265,70 @@ const Layout = (props) => (
 
       .api-warning p {
         margin: 0;
+      }
+
+
+
+      .floatalert {
+        z-index: 9999;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        top: 0;
+      }
+
+      .falert-center {
+        position: absolute;
+        width: 230px;
+        left: 25%;
+        top: 45%;
+        background-color: white;
+        border-radius: 4px;
+        padding: 4px 10px;
+        text-align: center;
+        box-shadow: 0 15px 35px 0 rgba(50, 50, 93, 0.1),
+          0 5px 15px 0 rgba(0, 0, 0, 0.07);
+      }
+
+      .falert-button-yes {
+        background-color: rgba(0, 100, 200, 0.9);
+        width: 100px;
+        height: 40px;
+        border-radius: 8px;
+        float: left;
+        margin: 10px;
+        margin-left: 25%;
+      }
+
+      .falert-button-no {
+        background-color: rgba(200, 0, 0, 0.4);
+        width: 100px;
+        height: 40px;
+        border-radius: 8px;
+        float: left;
+        margin: 10px;
+        margin-left: 25%;
+      }
+
+      .falert-button-yes:hover {
+        background-color: rgba(0, 100, 200, 0.7);
+        cursor: pointer;
+      }
+
+      .falert-button-no:hover {
+        background-color: rgba(200, 0, 0, 0.6);
+        cursor: pointer;
+      }
+
+      .falert-button-yes p {
+        color: white;
+        line-height: 40px;
+      }
+
+      .falert-button-no p {
+        color: rgba(20, 0, 0, 1);
+        line-height: 40px;
       }
     `}</style>
   </>

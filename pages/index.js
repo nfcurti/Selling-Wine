@@ -4,6 +4,7 @@ import Layout from '../components/layout';
 import HomeSearchForm from '../components/bookingSearchForm';
 
 class Home extends React.Component {
+
   render() {
     return (
       <Layout
