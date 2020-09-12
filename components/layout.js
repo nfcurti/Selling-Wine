@@ -281,8 +281,8 @@ const Layout = (props) => (
       .falert-center {
         position: absolute;
         width: 230px;
-        left: 25%;
-        top: 45%;
+        left: calc(50% - 100px);
+        top: 40%;
         background-color: white;
         border-radius: 4px;
         padding: 4px 10px;
