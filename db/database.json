@@ -34,6 +34,32 @@
       "email": "charles@mail.com",
       "password": "$2b$10$sPMIdueXfM454MtreeozJ.fK.tE72HzW4DbrKa4CsKrTL2oO1iudW",
       "avatar": "//www.gravatar.com/avatar/11e9bd6486bff0be09e5cec2f1230291?s=400"
+    },
+    {
+      "userId": "03f28PF8g",
+      "firstName": "Charles",
+      "lastName": "Digino",
+      "email": "charles@digino.com",
+      "password": "$2b$10$C1ZSusJ2xAX8ZkRS88TwGeCzGVEBJIOlHboGd5pbEDw.AURcY9haa",
+      "avatar": "//www.gravatar.com/avatar/eafbc7f2d5d2524b1bed2521cf2f32e7?s=400"
+    },
+    {
+      "userId": "3VOHhD5wo",
+      "firstName": "james",
+      "lastName": "adams",
+      "email": "james.adas@asd.com",
+      "password": "$2b$10$kQaHkiQk0lyf2gQU1YXUs.My.3zXXZ4MW/pfmWpZGpiKcMBYt905e",
+      "avatar": "//www.gravatar.com/avatar/0d5752db0640f2c4dead091c74f8e9bb?s=400"
+    },
+    {
+      "userId": "MjQJhJiXs",
+      "firstName": "opio",
+      "lastName": "orassio",
+      "email": "opiorass@lokigf.ng",
+      "password": "$2b$10$NXRupHDLP.XRdXGhBLS4HOymp5Qcv7Oq50tSRAMBj1YuknUD/82ji",
+      "avatar": "//www.gravatar.com/avatar/d46b55c4f3650ee04ba93b7cba59cdfa?s=400",
+      "website": "paginaweb.com",
+      "address": "mi direccion 12345"
     }
   ],
   "listings": [

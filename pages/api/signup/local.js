@@ -10,7 +10,7 @@ export default async (req, res) => {
   let hashedPassword = await bcrypt.hash(password, 10);
   let normalizedEmail = email.toLowerCase();
 
-  const userObject = {
+  var userObject = {
     userId: shortid.generate(),
     firstName: firstName,
     lastName: lastName,
@@ -18,6 +18,14 @@ export default async (req, res) => {
     password: hashedPassword,
     avatar: gravatar.url(normalizedEmail, {s: '400'}),
   };
+
+  if(req.body.website) {
+    userObject.website = req.body.website;
+  }
+
+  if(req.body.address) {
+    userObject.address = req.body.address;
+  }
 
   await storage
     .get('users')

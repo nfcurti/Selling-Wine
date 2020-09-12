@@ -14,6 +14,8 @@ class SignupForm extends Component {
       firstName: '',
       lastName: '',
       email: '',
+      website: '',
+      address: '',
       password: '',
       error: '',
     };
@@ -90,6 +92,26 @@ class SignupForm extends Component {
               value={this.state.password}
               onChange={this.handleChange}
               required
+            />
+
+            <input
+              className="website"
+              type="text"
+              id="website"
+              name="website"
+              placeholder="Website (For wineries)"
+              value={this.state.website}
+              onChange={this.handleChange}
+            />
+
+            <input
+              className="address"
+              type="text"
+              id="address"
+              name="address"
+              placeholder="Address (For users)"
+              value={this.state.address}
+              onChange={this.handleChange}
             />
 
             <button type="submit" className="btn btn-primary btn-full">
