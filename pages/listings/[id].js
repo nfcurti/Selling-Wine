@@ -155,7 +155,7 @@ class Listing extends React.Component {
                     onClick={this.handleBookingStartClick}
                     disabled={!this.props.isAuthenticated}
                   >
-                    Book now
+                    Buy now
                   </button>
                 )}
 
