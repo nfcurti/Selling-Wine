@@ -50,7 +50,7 @@ const Layout = (props) => (
             <p>Yes I do</p>
           </div>
           <div onClick={() => {
-            setAgeLimit(false);
+            
           }} className={'falert-button-no'}>
             <p>No I don't</p>
           </div>

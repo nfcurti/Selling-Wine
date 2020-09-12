@@ -7,7 +7,7 @@ import logger from '../helpers/logger';
 
 function setAgeLimit(value) {
   logger.log('ageLimit.setAgeLimit', value ? 'valid' : 'invalid');
-  cookie.set('agelimit', value, {expires: 1});
+  cookie.set('agelimit', value);
 
   redirect('/');
 }
@@ -15,7 +15,7 @@ function setAgeLimit(value) {
 function getAgeLimit() {
   logger.log('ageLimit.getAgeLimit');
   var ageLimitValue = cookie.get('agelimit');
-  return ageLimitValue == true ? ageLimitValue : undefined;
+  return ageLimitValue;
 }
 
 export {setAgeLimit, getAgeLimit};
