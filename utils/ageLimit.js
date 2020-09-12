@@ -15,7 +15,7 @@ function setAgeLimit(value) {
 function getAgeLimit() {
   logger.log('ageLimit.getAgeLimit');
   var ageLimitValue = cookie.get('agelimit');
-  return ageLimitValue;
+  return ageLimitValue == true ? ageLimitValue : undefined;
 }
 
 export {setAgeLimit, getAgeLimit};
