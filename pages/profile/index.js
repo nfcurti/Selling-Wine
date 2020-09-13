@@ -46,18 +46,11 @@ class Profile extends React.Component {
       >
         <div className="profile">
           <h4>Your profile details</h4>
-          <pre className="profile-details bg-light">
-            <code>{JSON.stringify(profile, null, 2)}</code>
-          </pre>
-
-          <h4>Admin</h4>
-          <button
-            className="btn btn-secondary"
-            onClick={this.clearTransactions}
-          >
-            Clear history
-          </button>
-
+          <b>Full Name: </b>{profile.firstName} {profile.lastName}
+          <br />
+          <b>Email: </b>{profile.email}
+          <h4 className="mt2">Stripe</h4>
+          <b>Stripe Account: </b>{profile.stripe.stripeUserId}
           {profile.stripe && (
             <>
               <br />
@@ -70,6 +63,15 @@ class Profile extends React.Component {
               </button>
             </>
           )}
+          <h4 className="mt2">Admin</h4>
+          <button
+            className="btn btn-secondary"
+            onClick={this.clearTransactions}
+          >
+            Clear history
+          </button>
+
+          
         </div>
         <style jsx>{`
           .profile h4 {
@@ -80,6 +82,10 @@ class Profile extends React.Component {
 
           .profile-details {
             padding: 10px;
+          }
+
+          .mt2{
+            margin-top:2em
           }
         `}</style>
       </Layout>
