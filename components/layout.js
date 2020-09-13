@@ -43,17 +43,21 @@ const Layout = (props) => (
       :
       <div className={'floatalert '}>
         <div className={'falert-center'}>
-          <p>Are you over 21?</p>
+          <h1>Are you over 21?</h1>
+          <p>You must be 21 years or older to order from this site and receive your package. Keep in mind any additional shipping fees and state restrictions on alcohol delivery.</p>
+          <div class="row p2">
           <div onClick={() => {
             setAgeLimit(true);
           }} className={'falert-button-yes'}>
-            <p>Yes I do</p>
+            <p>Yes I am</p>
           </div>
           <div onClick={() => {
             
           }} className={'falert-button-no'}>
-            <p>No I don't</p>
+            <p>No I'm not</p>
           </div>
+          </div>
+          
         </div>
       </div>
     }
@@ -173,7 +177,7 @@ const Layout = (props) => (
         font-size: 28px;
         font-weight: 600;
         color: #202020;
-        width: 70%;
+        margin-top:0.3em;
         margin-bottom: 8px;
       }
 
@@ -249,6 +253,10 @@ const Layout = (props) => (
         padding-bottom: 20px;
       }
 
+      .p2 {
+        padding:2em;
+      }
+
       .api-warning {
         margin-left: auto;
         margin-right: auto;
@@ -280,8 +288,8 @@ const Layout = (props) => (
 
       .falert-center {
         position: absolute;
-        width: 230px;
-        left: calc(50% - 100px);
+        width: 33em;
+        left: 32%;
         top: 40%;
         background-color: white;
         border-radius: 4px;
@@ -298,7 +306,7 @@ const Layout = (props) => (
         border-radius: 8px;
         float: left;
         margin: 10px;
-        margin-left: 25%;
+        margin-left: 6em;
       }
 
       .falert-button-no {
@@ -324,11 +332,14 @@ const Layout = (props) => (
       .falert-button-yes p {
         color: white;
         line-height: 40px;
+        font-weight: 700;
+        color: white;
       }
 
       .falert-button-no p {
-        color: rgba(20, 0, 0, 1);
         line-height: 40px;
+        font-weight: 700;
+        color: white;
       }
     `}</style>
   </>

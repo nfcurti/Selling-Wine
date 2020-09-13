@@ -38,6 +38,7 @@
     "react-number-format": "^4.2.0",
     "react-stripe-elements": "^5.0.0",
     "shortid": "^2.2.14",
-    "stripe": "^7.13.1"
+    "stripe": "^7.13.1",
+    "utils.js": "^1.0.1"
   }
 }
