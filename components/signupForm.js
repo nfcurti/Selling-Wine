@@ -94,15 +94,7 @@ class SignupForm extends Component {
               required
             />
 
-            <input
-              className="website"
-              type="text"
-              id="website"
-              name="website"
-              placeholder="Website (For wineries)"
-              value={this.state.website}
-              onChange={this.handleChange}
-            />
+           
 
             <input
               className="address"
