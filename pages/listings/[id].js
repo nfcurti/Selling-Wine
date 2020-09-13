@@ -168,11 +168,6 @@ class Listing extends React.Component {
                   </button>
                 )}
 
-                {
-                  this.props.listing.author.website ?
-                  <a href={'//'+this.props.listing.author.website} className="websiteLink">Visit website</a>
-                  : null
-                }
 
                 {!this.props.isAuthenticated && (
                   <Link href="/login">
