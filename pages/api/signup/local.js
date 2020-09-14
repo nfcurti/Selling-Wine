@@ -19,10 +19,6 @@ export default async (req, res) => {
     avatar: gravatar.url(normalizedEmail, {s: '400'}),
   };
 
-  if(req.body.website) {
-    userObject.website = req.body.website;
-  }
-
   if(req.body.address) {
     userObject.address = req.body.address;
   }

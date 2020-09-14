@@ -14,7 +14,6 @@ class SignupForm extends Component {
       firstName: '',
       lastName: '',
       email: '',
-      website: '',
       address: '',
       password: '',
       error: '',
@@ -94,14 +93,12 @@ class SignupForm extends Component {
               required
             />
 
-           
-
             <input
               className="address"
               type="text"
               id="address"
               name="address"
-              placeholder="Address (For users)"
+              placeholder="Address"
               value={this.state.address}
               onChange={this.handleChange}
               required

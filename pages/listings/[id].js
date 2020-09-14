@@ -336,15 +336,6 @@ class Listing extends React.Component {
             .pane-images {
               padding-bottom: 50px;
             }
-
-            .websiteLink {
-              font-weight: normal;
-              text-decoration: none;
-              margin: 0;
-              line-height: 18px;
-              padding-top: 6px;
-              color: black;
-            }
           `}</style>
         </div>
       </Layout>
