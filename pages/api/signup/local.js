@@ -23,6 +23,10 @@ export default async (req, res) => {
     userObject.address = req.body.address;
   }
 
+  if(req.body.invitationCode) {
+    userObject.invitationCode = req.body.invitationCode;
+  }
+
   await storage
     .get('users')
     .push(userObject)

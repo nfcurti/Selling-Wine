@@ -78,18 +78,22 @@ class DashboardHeader extends Component {
                   </a>
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link href="/dashboard/host">
-                  <a
-                    className={
-                      "nav-link " +
-                      (this.props.dashboardType == "host" ? "active" : "")
-                    }
-                  >
-                    Your listings
-                  </a>
-                </Link>
-              </li>
+              {
+                profile.invitationCode == '12345' ?
+                <li className="nav-item">
+                  <Link href="/dashboard/host">
+                    <a
+                      className={
+                        "nav-link " +
+                        (this.props.dashboardType == "host" ? "active" : "")
+                      }
+                    >
+                      Your listings
+                    </a>
+                  </Link>
+                </li>
+                : null
+              }
             </ul>
           </div>
         </div>

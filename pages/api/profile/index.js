@@ -8,7 +8,7 @@ export default requireAuthEndpoint(async (req, res) => {
     let userAccount = storage
       .get('users')
       .find({userId: authenticatedUserId})
-      .pick('userId', 'avatar', 'firstName', 'lastName', 'email', 'stripe', 'address')
+      .pick('userId', 'avatar', 'firstName', 'lastName', 'email', 'stripe', 'address', 'invitationCode')
       .value();
     return res.status(200).json(userAccount);
   } catch (err) {

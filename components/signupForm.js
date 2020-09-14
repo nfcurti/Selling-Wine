@@ -15,6 +15,7 @@ class SignupForm extends Component {
       lastName: '',
       email: '',
       address: '',
+      invitationCode: '',
       password: '',
       error: '',
     };
@@ -102,6 +103,16 @@ class SignupForm extends Component {
               value={this.state.address}
               onChange={this.handleChange}
               required
+            />
+
+            <input
+              className="invitationCode"
+              type="text"
+              id="invitationCode"
+              name="invitationCode"
+              placeholder="Invitation Code"
+              value={this.state.invitationCode}
+              onChange={this.handleChange}
             />
 
             <button type="submit" className="btn btn-primary btn-full">

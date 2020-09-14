@@ -59,6 +59,16 @@
       "password": "$2b$10$NXRupHDLP.XRdXGhBLS4HOymp5Qcv7Oq50tSRAMBj1YuknUD/82ji",
       "avatar": "//www.gravatar.com/avatar/d46b55c4f3650ee04ba93b7cba59cdfa?s=400",
       "address": "mi direccion 12345"
+    },
+    {
+      "userId": "o9JQvUog9",
+      "firstName": "Juan",
+      "lastName": "manuel",
+      "email": "juan@a.com",
+      "password": "$2b$10$E8p6ZOsAY2CKegOZM8Hnbe/k52qvP5B.Pz1WshRalVdC1YWxYzpz6",
+      "avatar": "//www.gravatar.com/avatar/0dbf75e0060d7b990db3d7857fc7a963?s=400",
+      "address": "direccion 444",
+      "invitationCode": "12345"
     }
   ],
   "listings": [
