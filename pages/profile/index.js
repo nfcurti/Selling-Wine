@@ -49,20 +49,27 @@ class Profile extends React.Component {
           <b>Full Name: </b>{profile.firstName} {profile.lastName}
           <br />
           <b>Email: </b>{profile.email}
-          <h4 className="mt2">Stripe</h4>
-          <b>Stripe Account: </b>{profile.stripe.stripeUserId}
-          {profile.stripe && (
+          {
+            profile.stripe ?
             <>
-              <br />
-              <br />
-              <button
-                className="btn btn-secondary"
-                onClick={this.disconnectStripeAccount}
-              >
-                Disconnect Stripe account
-              </button>
-            </>
-          )}
+            <h4 className="mt2">Stripe</h4>
+            <b>Stripe Account: </b>
+            {profile.stripe.stripeUserId}
+            {profile.stripe && (
+              <>
+                <br />
+                <br />
+                <button
+                  className="btn btn-secondary"
+                  onClick={this.disconnectStripeAccount}
+                >
+                  Disconnect Stripe account
+                </button>
+              </>
+            )}
+            </> :
+            null
+          }
           <h4 className="mt2">Admin</h4>
           <button
             className="btn btn-secondary"
@@ -71,7 +78,7 @@ class Profile extends React.Component {
             Clear history
           </button>
 
-          
+
         </div>
         <style jsx>{`
           .profile h4 {
