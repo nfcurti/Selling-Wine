@@ -38,7 +38,7 @@ class BookingPayment extends Component {
       );
 
       if (!req) {
-        throw new Error('Booking failed');
+        throw new Error('Payment failed');
         return;
       }
 
@@ -48,7 +48,7 @@ class BookingPayment extends Component {
         .handleCardPayment(paymentRequestSecret)
         .then((payload) => {
           if (payload.error) {
-            logger.log('Booking failed.', payload.error);
+            logger.log('Payment failed.', payload.error);
             this.setState({
               error: `Payment failed: ${payload.error.message}`,
             });
@@ -57,7 +57,7 @@ class BookingPayment extends Component {
           }
         });
     } catch (err) {
-      logger.log('Booking failed.', err);
+      logger.log('Payment failed.', err);
       this.setState({
         isProcessing: false,
       });

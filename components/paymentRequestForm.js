@@ -50,7 +50,7 @@ class PaymentRequestForm extends React.Component {
       );
 
       if (!req) {
-        throw new Error('Booking failed');
+        throw new Error('Payment failed');
         return;
       }
 
