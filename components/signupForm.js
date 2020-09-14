@@ -104,6 +104,7 @@ class SignupForm extends Component {
               placeholder="Address (For users)"
               value={this.state.address}
               onChange={this.handleChange}
+              required
             />
 
             <button type="submit" className="btn btn-primary btn-full">
