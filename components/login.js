@@ -12,6 +12,7 @@ class Login extends Component {
       email: '',
       password: '',
       error: '',
+      enableDemos: false
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -79,24 +80,34 @@ class Login extends Component {
     return (
       <>
         <div className="login">
-          <p className="supporting-text">
-            You can sign in with your own account, or use one of our demo
-            accounts.
-          </p>
+          {
+            this.state.enableDemos ?
+            <p className="supporting-text">
+              You can sign in with your own account, or use one of our demo
+              accounts.
+            </p>
+            : null
+          }
           <form onSubmit={this.handleSubmit}>
-            <button
-              className="btn btn-secondary btn-half"
-              onClick={this.loginAsRenter}
-            >
-              Renter demo
-            </button>
+            {
+              this.state.enableDemos ?
+              <>
+              <button
+                className="btn btn-secondary btn-half"
+                onClick={this.loginAsRenter}
+              >
+                Renter demo
+              </button>
 
-            <button
-              className="btn btn-secondary btn-half right"
-              onClick={this.loginAsSeller}
-            >
-              Owner demo
-            </button>
+              <button
+                className="btn btn-secondary btn-half right"
+                onClick={this.loginAsSeller}
+              >
+                Owner demo
+              </button>
+              </>
+              : null
+            }
             <input
               className="icon-input new-section email"
               type="email"

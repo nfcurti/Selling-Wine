@@ -3,6 +3,7 @@ import Layout from '../components/layout';
 import SignupForm from '../components/signupForm';
 
 class Signup extends React.Component {
+
   render() {
     return (
       <Layout
@@ -16,8 +17,8 @@ class Signup extends React.Component {
               <div className="box popover">
                 <h1>Create an account</h1>
                 <p className="supporting-text">
-                  Create a new account, or sign in with one of{' '}
-                  <a href="/login">our demo accounts on login</a>.
+                  Create a new account, or
+                  <a href="/login"> sign in</a>.
                 </p>
                 <SignupForm />
               </div>
