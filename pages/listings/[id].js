@@ -50,6 +50,7 @@ class Listing extends React.Component {
   };
 
   onBookingConfirmed = (transactionId) => {
+    //Send email to person
     this.setState({
       transactionId: transactionId,
       isBookingConfirmed: true,

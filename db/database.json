@@ -69,6 +69,16 @@
       "avatar": "//www.gravatar.com/avatar/0dbf75e0060d7b990db3d7857fc7a963?s=400",
       "address": "direccion 444",
       "invitationCode": "12345"
+    },
+    {
+      "userId": "FCEvGmvL-",
+      "firstName": "asd",
+      "lastName": "asd",
+      "email": "asd@asd.com",
+      "password": "$2b$10$jKnjiR3KhpmEWgl14cKurubKu8KeKmtxCq.tBwJYawWYHm/5.V5Aa",
+      "avatar": "//www.gravatar.com/avatar/0eb178cec364c022a189c3814e5f7483?s=400",
+      "address": "asd",
+      "invitationCode": "12345"
     }
   ],
   "listings": [
